@@ -28,8 +28,6 @@ const HomeScreen = ({ navigation }) => {
             SecureStore.deleteItemAsync('tripinfo').catch((error) => console.log('Could not delete trip info.', error))
         }
 
-        // const apiKey = "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";
-        const apiKey = "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";
 
         // ChatGPT API endpoint
         const apiUrl = 'https://api.openai.com/v1/chat/completions';
