@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
             SecureStore.deleteItemAsync('tripinfo').catch((error) => console.log('Could not delete trip info.', error))
         }
 
-        const apiKey = "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";
+        const apiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
         // ChatGPT API endpoint
         const apiUrl = 'https://api.openai.com/v1/chat/completions';
@@ -91,18 +91,6 @@ const HomeScreen = ({ navigation }) => {
                 setRemember(true);
             }
         });
-    }, []);
-
-    useEffect(() => {
-        SecureStore.getItemAsync('userinfo').then((userdata) => {
-            const userinfo = JSON.parse(userdata);
-            if (userinfo) {
-                setUsername(userinfo.username);
-                setPassword(userinfo.password);
-                setRemember(true);
-            }
-        });
-
     }, []);
 
     return (
