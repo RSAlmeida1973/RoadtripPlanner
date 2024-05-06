@@ -92,7 +92,7 @@ const CustomDrawerContent = (props) => {
                     <Image source={logo} style={styles.drawerImage} />
                 </View>
                 <View style={{ flex: 2 }}>
-                    <Text style={styles.drawerHeaderText}>NuCamp</Text>
+                    <Text style={styles.drawerHeaderText}>Roadtrip!</Text>
                 </View>
             </View>
             <DrawerItemList {...props} labelStyle={{ fontWeight: 'bold' }} />
