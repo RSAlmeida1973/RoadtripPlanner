@@ -1,6 +1,5 @@
 import { Text, ScrollView } from 'react-native';
 import { Card, Avatar, ListItem } from 'react-native-elements';
-//import { useSelector } from 'react-redux';
 
 const AboutScreen = () => {
     return (

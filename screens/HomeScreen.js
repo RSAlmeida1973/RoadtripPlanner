@@ -3,8 +3,6 @@ import { CheckBox, Input, Button, Icon, Card } from "react-native-elements"
 import { useEffect, useState } from "react";
 import * as SecureStore from 'expo-secure-store';
 import Loading from "../components/LoadingComponent";
-// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-//import { useSelector } from 'react-redux';
 
 const HomeScreen = ({ navigation }) => {
     const [startCity, setStartCity] = useState('');
@@ -67,9 +65,6 @@ const HomeScreen = ({ navigation }) => {
             jsonResult = jsonResult.replaceAll("\n", "\n\n");
             setResultString('');
             setResultString(jsonResult);
-            // setResultString(json.choices[0].message.content);
-            // const resultArr = resultString.split("\n");
-            // setResultString(resultArr);
 
             console.log("2: " + JSON.stringify(json));
             console.log("jsonResult: " + jsonResult);
@@ -97,25 +92,6 @@ const HomeScreen = ({ navigation }) => {
             }
         });
     }, []);
-
-    // const handleLogin = () => {
-    //     console.log('username:', username);
-    //     console.log('password:', password);
-    //     console.log('remember:', remember);
-    //     if (remember) {
-    //         SecureStore.setItemAsync(
-    //             'userinfo',
-    //             JSON.stringify({
-    //                 username,
-    //                 password
-    //             })
-    //         ).catch((error) => console.log('Could not save user info', error));
-    //     } else {
-    //         SecureStore.deleteItemAsync('userinfo').catch((error) =>
-    //             console.log('Could not delete user info', error)
-    //         );
-    //     }
-    // };
 
     useEffect(() => {
         SecureStore.getItemAsync('userinfo').then((userdata) => {

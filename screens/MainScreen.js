@@ -2,8 +2,6 @@ import { StyleSheet, Platform, View, Text, Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
-//import { useDispatch } from 'react-redux';
-//import { useEffect } from 'react';
 import Constants from 'expo-constants';
 import logo from '../assets/CarIcon.png';
 import HomeScreen from './HomeScreen';
