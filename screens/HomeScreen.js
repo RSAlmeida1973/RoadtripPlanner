@@ -28,7 +28,6 @@ const HomeScreen = ({ navigation }) => {
             SecureStore.deleteItemAsync('tripinfo').catch((error) => console.log('Could not delete trip info.', error))
         }
 
-        //const apiKey = process.env.CHATGPT_API_KEY;
         // const apiKey = "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";
         const apiKey = "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";
 
